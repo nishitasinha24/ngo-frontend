@@ -1,0 +1,69 @@
+
+<body>
+    
+
+<form (ngSubmit)="childReg(myform.value)" #myform="ngForm">
+   
+    <table border="0" cellpadding="5" cellspacing="0">
+    <tr>
+         <td style="width: 50%">
+            <label for="Name"><b>Name*</b></label><br />
+            <input  ngModel name="child_name" type="text" maxlength="50" style="width: 260px" />
+         </td>  
+         
+    </tr>
+    <tr>
+        <td colspan="2">
+            <label for="Age"><b>Age*</b></label><br />
+             <input  ngModel name="age" type="text" maxlength="100" style="width: 535px" />
+         </td> 
+     </tr> 
+    <tr>
+            <td>
+                <b> Gender: </b>
+                 <span>
+            <input  type="radio" ngModel name="gender" value="male" >Male
+            <input   type="radio"  ngModel name="gender" value="other">Female</span>
+            </td>
+</tr><br><br>
+<tr>
+    <td>
+        <label for="Color"><b>Color</b></label><br />
+         <input ngModel name="color" type="text" maxlength="100" style="width: 535px" />
+    </td> 
+</tr>
+
+<tr>
+<td>
+   <b> Blood Group:</b> <select ngModel name="bloodGroup">
+      <option selected="selected" value="Select">Select</option>
+    <option value="A+">A+</option>
+    <option value="A-">A-</option>
+    <option value="B+">B+</option>
+    <option value="B-">B-</option>
+    <option value="AB+">AB+</option>
+    <option value="AB-">AB-</option>
+    <option value="O+">O+</option>
+    <option value="O-">O-</option>
+    </select></td></tr><br><br>
+    <tr>
+        <td>
+           <b> Health Report: </b><input type="file" ngModel name="health"><br><br>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b> Child Image:</b> <input type="file" ngModel name="url"><br><br>
+          </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="submit" value="Submit">
+        </td>
+    </tr>
+    
+
+</table>
+</form>
+</body>
+    

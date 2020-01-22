@@ -1,0 +1,24 @@
+<form (ngSubmit)="authenticate(myform.value)" #myform="ngForm" >
+    <div class="imgcontainer">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCjed_UCEAdwmfpsIEt306fPKx2QslqJ--eoEbyiLY0UqrNJUo&s" alt="Avatar" class="avatar">
+    </div>
+  
+    <div class="container">
+      <label for="uname"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" ngModel name="email" required><br><br>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" ngModel name="password" required><br><br>
+  
+      <button type="submit" class="btn">Login</button><br><br>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+  
+    <div class="container" style="background-color:#f1f1f1"><br><br>
+      <button type="reset" class="cancelbtn">Cancel</button><br><br>
+      <span class="psw">Forgot <a href="#">password?</a></span><br><br>
+    </div>
+  </form>
+

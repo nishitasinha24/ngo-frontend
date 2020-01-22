@@ -1,0 +1,185 @@
+<body>
+    <form method = "POST" (ngSubmit)="ngoRegister(myform.value)" #myform="ngForm">
+    <table style="WIDTH: 99.53%; BORDER-COLLAPSE: collapse" class="mytable" border="0" cellspacing="1" cellpadding="1">
+        <tbody><tr>
+
+
+            <td style="WIDTH: 35%; HEIGHT: 43px" colspan="2" align="center"><strong><u><font color="#006600" size="4"><em>NGO 
+                                Registration</em></font></u></strong></td>
+
+                                <td>
+                                  Id  <input name="id" type="number" ngModel  >
+                                </td>
+        </tr>
+        <tr id="Tr1">
+<td style="WIDTH: 35%" align="left">
+                <h4>Select State</h4>
+            </td>
+<td style="WIDTH: 35%" align="left"><select ngModel name="state" id="ddlstate" style="width:152px;">
+<option selected="selected" value="Select">Select</option>
+<option value="35">Andaman and Nicobar Island</option>
+<option value="28">Andhra Pradesh</option>
+<option value="12">Arunachal Pradesh</option>
+<option value="18">Assam</option>
+<option value="10">Bihar</option>
+<option value="04">Chandigarh</option>
+<option value="22">Chhattisgarh</option>
+<option value="01">Jammu and Kashmir</option>
+<option value="25">Daman and Diu</option>
+<option value="07">Delhi</option>
+<option value="30">Goa</option>
+<option value="24">Gujarat</option>
+<option value="06">Haryana</option>
+<option value="02">Himachal Pradesh</option>
+<option value="26">Dadar and Nagar Haveli</option>
+<option value="20">Jharkhand</option>
+<option value="29">Karnataka</option>
+<option value="32">Kerala</option>
+<option value="31">Lakshadweep</option>
+<option value="23">Madhya Pradesh</option>
+<option value="27">Maharashtra</option>
+<option value="14">Manipur</option>
+<option value="17">Meghalaya</option>
+<option value="15">Mizoram</option>
+<option value="13">Nagaland</option>
+<option value="21">Orissa</option>
+<option value="34">Pondicherry</option>
+<option value="03">Punjab</option>
+<option value="08">Rajasthan</option>
+<option value="11">Sikkim</option>
+<option value="33">Tamil Nadu</option>
+<option value="16">Tripura</option>
+<option value="09">Uttar Pradesh</option>
+<option value="05">UTTARAKHAND</option>
+<option value="19">West Bengal</option>
+<option value="36">Telangana</option>
+
+</select></td>
+</tr>
+
+        <tr id="trdist">
+<td style="WIDTH: 35%" align="left">
+                <h4>Select District</h4>
+            </td>
+<td style="WIDTH: 35%" align="left"><select ngModel name="district"  id="ddlDistrict" style="width:152px;">
+
+</select></td>
+</tr>
+
+        <tr>
+            <td style="WIDTH: 35%" nowrap="" align="left">
+                <h4>Date When Set Up</h4>
+            </td>
+            <td style="WIDTH: 35%" nowrap="" align="left"><input ngModel name="SetUpDate" type="date" maxlength="10" id="txtSetupDt" class="inputtext" ><span style="FONT-SIZE: 12px">(DD/MM/YYYY)</span>
+            </td>
+        </tr>
+        <tr>
+            <td style="WIDTH: 35%; HEIGHT: 38px" nowrap="" align="left">
+                <h4>Correspondence Address
+                </h4>
+            </td>
+            <td style="WIDTH: 35%; HEIGHT: 38px" nowrap="" align="left"><textarea ngModel name="address" rows="2" cols="20" id="txtAddress" class="inputtext" style="height:45px;width:264px;"></textarea></td>
+        </tr>
+        <tr>
+            <td style="WIDTH: 35%" nowrap="" align="left">
+                <h4>Contact Person</h4>
+            </td>
+            <td style="WIDTH: 35%; HEIGHT: 25px" align="left"><input ngModel name="contactPerson" type="text" maxlength="50" id="txtContPerson" class="inputtext" ></td>
+        </tr>
+        <tr>
+            <td style="WIDTH: 35%; HEIGHT: 23px" nowrap="" align="left">
+                <h4>Phone</h4>
+            </td>
+            <td style="WIDTH: 35%; HEIGHT: 23px" nowrap="" align="left"><span style="COLOR: #000; FONT-SIZE: 10pt">STD
+                </span>
+                <input ngModel name="PhoneNumber" type="text" maxlength="6" id="std" class="inputtext"  style="width:41px;"><input name="txtPhoneNo" type="text" maxlength="15" id="txtPhoneNo" class="inputtext" ></td>
+        </tr>
+        <tr>
+            <td style="WIDTH: 35%; HEIGHT: 23px" nowrap="" align="left">Mobile No</td>
+            <td style="WIDTH: 35%; HEIGHT: 23px" nowrap="" align="left"><input ngModel name="txtmob" type="text" maxlength="10" id="txtmob"></td>
+        </tr>
+        <tr>
+            <td style="WIDTH: 35%" nowrap="" align="left">
+                <h4>Fax</h4>
+            </td>
+            <td style="WIDTH: 35%" nowrap="" align="left"><input  name="fax" type="text" maxlength="10" id="fax" class="inputtext" ></td>
+        </tr>
+        <tr>
+            <td style="WIDTH: 35%; HEIGHT: 23px" nowrap="" align="left">
+                <h4>Email</h4>
+            </td>
+            <td style="WIDTH: 35%; HEIGHT: 23px" nowrap="" align="left"><input ngModel name="email" type="text" maxlength="50" id="email" class="inputtext"></td>
+        </tr>
+        <tr>
+            <td style="WIDTH: 35%; HEIGHT: 39px" nowrap="" align="left">User Id</td>
+            <td style="WIDTH: 35%; HEIGHT: 39px" nowrap="" align="left"><input name="txtuid" type="text" maxlength="10" id="txtuid" class="inputtext"></td>
+        </tr>
+        <tr>
+            <td style="COLOR: red" colspan="2" align="left"></td>
+        </tr>
+        <tr>
+            <td style="WIDTH: 35%; HEIGHT: 38px" nowrap="" align="left">Password</td>
+            <td style="WIDTH: 35%; HEIGHT: 38px" nowrap="" align="left"><input ngModel name="password" type="password" maxlength="8" id="txtpwd" class="inputtext" ></td>
+        </tr>
+        <tr>
+            <td style="WIDTH: 35%; HEIGHT: 38px" nowrap="" align="left">Confirm Password</td>
+            <td style="WIDTH: 35%; HEIGHT: 38px" nowrap="" align="left"><input ngModel name="confirmPassword" type="txtpwd" maxlength="8" id="txtconpwd" class="inputtext" ></td>
+        </tr>
+        <tr>
+            <td style="COLOR: red" colspan="2" align="left">Note:-Password Must Conation One 
+                Capital Alpha Charcter [A-Z],one small alpha charcter [a-z],one numerical value 
+                [0-9] and one special charcter [@#.-_] and should be 8 digit</td>
+        </tr>
+        <tr>
+            <td style="WIDTH: 35%; HEIGHT: 38px" nowrap="" align="left">Seurity Question</td>
+            <td style="WIDTH: 35%; HEIGHT: 38px" nowrap="" align="left"><select name="ddlsecurity" id="ddlsecurity" style="width:256px;">
+<option selected="selected" value="0">Select</option>
+<option value="1">What's your favourite Colour?</option>
+<option value="2">What's your favourite Dish?</option>
+<option value="3">What's your first School name?</option>
+<option value="4">What's your nick name?</option>
+
+</select></td>
+        </tr>
+        <tr>
+            <td style="WIDTH: 35%; HEIGHT: 38px" nowrap="" align="left">Answer</td>
+            <td style="WIDTH: 35%; HEIGHT: 38px" nowrap="" align="left"><input ngModel name="txtanswer" type="text" maxlength="100" id="txtanswer" class="inputtext" style="width:208px;"></td>
+        </tr>
+        <tr>
+            <td style="WIDTH: 35%; HEIGHT: 38px" nowrap="" align="left"></td>
+            <td ></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td height="27">
+                <div style="FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 12px"><span style="COLOR: #0066ff">Not 
+                        readable?
+                        <a id="lnkRefresh"  style="COLOR: #268acb; TEXT-DECORATION: none">
+                            <font color="#2299b2">Refresh Image</font>
+                        </a></span></div>
+            </td>
+        </tr>
+        <tr>
+            <td style="WIDTH: 35%" nowrap="" align="left">Enter Text</td>
+            <td style="WIDTH: 35%; HEIGHT: 40px" align="left"><input name="txtsecurity" type="text" id="txtsecurity"></td>
+        </tr>
+        <tr id="trpresave">
+<td colspan="2" align="left"></td>
+</tr>
+
+        <tr>
+            <td style="WIDTH: 35%; HEIGHT: 26px" colspan="2" nowrap="" align="center">&nbsp;&nbsp;
+                <input type="submit" name="Button1" value="Submit"  id="Button1" style="width:95px;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="2" align="left"><span id="lblMsg" class="inputtext" style="color:Red;"></span></td>
+        </tr>
+        <tr>
+            <td style="WIDTH: 35%; HEIGHT: 26px" colspan="2" nowrap="" align="left"></td>
+        </tr>
+    </tbody></table>
+
+</form>
+
+
+</body>

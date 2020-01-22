@@ -1,0 +1,210 @@
+
+<body>
+    <div>
+        <br><br>
+        <h3>Parents:Online Register Form</h3>
+        <br><br>
+    </div>
+    <br><br>
+    <form method="POST" (ngSubmit)="register(myform.value)" #myform="ngForm" >
+      <table cellspacing="4" padding="0" width="75%" height="37px">
+          <tr>
+              <td>
+        <B>Martial Details:</B>
+        </td>
+        <td>
+       Marital Status <select ngModel name="maritalStatus">
+           <option selected>Married</option>
+           <option>Single</option>
+           <option >Widow</option>
+           <option>Divorcee</option>
+       </select>
+       </td>
+          </tr>
+          <br>
+          <br>
+       <tr>
+           <td>
+       <b>Application Category:</b>
+       </td>
+       <td>
+           <tr>
+               <td></td>
+       Status: 
+      <span> <input type="radio" ngModel name="status" value="couple" >Couple
+       <input type="radio" ngModel name="status" value="male" >Male
+       <input type="radio" ngModel name="status" value="other">Female</span>
+       </td>
+</tr><br><br>
+<tr><td>
+       <b>Personal Information:</b><br><br>
+</td>
+<td>
+      Name:<input type="text" ngModel name="maleParName"> Male </td>
+      </tr>
+      <tr>
+          <td></td>
+           <td> <input type="text" ngModel name="femaleParName" > Female</td>
+           Password:<input type="password" ngModel name="password">
+           
+           reg_no:<input type="number" ngModel name="reg_no">
+
+            </tr><br><br>
+
+
+            
+            <tr>
+                <td></td>
+                <td>
+       Nationality:   
+       <select  ngModel name="nationality" >															
+        <option value="Select">Select</option>
+        <option value="INDIAN">INDIAN</option>
+        <option value="AUSTRALIA">AUSTRALIA</option>
+        <option value="AUSTRIA ">AUSTRIA </option>
+        <option value="Bahrain">Bahrain</option>
+        <option value="Barbados">Barbados</option>
+        <option value="BELGIUM">BELGIUM</option>
+     </select></td></tr> <br><br>
+     <tr>
+     <td></td><td>
+      Date of Birth <input type="text" ngModel name="reg_date">(dd/mm/yyyy)
+      </td>
+      </tr>
+      <br>
+      <br>
+      <tr><td>
+
+      <b>Professional Details:</b><br><br></td>
+      <td>
+      Occupation <select>
+        <option selected="selected" value="Select" >Select</option>
+      <option value="Business">Business</option>
+      <option value="Public Sector">Public Sector</option>
+      <option value="Private Sector">Private Sector</option>
+      <option value="N">Not Working</option>
+      </select></td></tr><br><br>
+
+<tr>
+    <td></td>
+ <td><p>Place of work</p><textarea rows="4" cols="40" ></textarea><br><br></td>
+</tr>
+<tr><td></td>
+<td width="60px">Annual Income(In Rs.):<input type="rs"><br><br></td></tr>
+   <tr>
+       <td></td>
+       <td> No. of Adopted Children:<input type="number"><br><br></td>
+   </tr>   
+   <tr>
+    <td></td>
+    <td> Total:<input type="number"><br><br></td>
+</tr> 
+
+
+    <span id="Label2" style="color:Red;">*If No of Biological and Adopted Children More then 2 then you are eligible for Special Need Child</span>
+												
+    <br><br>
+ 
+
+<tr>
+    <td><b>Contact Details:</b></td>
+</tr>
+<tr>
+    <td></td>
+    <td> <p>Residence Address:</p>
+    <textarea rows="2" cols="20"></textarea><br><Br></td>
+</tr> 
+<tr><td></td>
+    <td>
+      State:<select>
+        <option selected="selected" value="Select">Select</option>   
+        <option value="Andaman and Nicobar Island">Andaman and Nicobar Island</option>
+        <option value="Andhra Pradesh">Andhra Pradesh</option>
+        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+        <option value="Assam">Assam</option>
+        <option value="Bihar">Bihar</option>
+        <option value="Chandigarh">Chandigarh</option>
+        <option value="Chhattisgarh">Chhattisgarh</option>
+        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+        <option value="Daman and Diu">Daman and Diu</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Goa">Goa</option>
+        <option value="Gujarat">Gujarat</option>
+        <option value="Haryana">Haryana</option>
+        <option value="Himachal Pradesh">Himachal Pradesh</option>
+        <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+        <option value="Jharkhand">Jharkhand</option>
+        <option value="Karnataka">Karnataka</option>
+        <option value="Kerala">Kerala</option>
+        <option value="Lakshadweep">Lakshadweep</option>
+        <option value="Madhya Pradesh">Madhya Pradesh</option>
+        <option value="Maharashtra">Maharashtra</option>
+        <option value="Manipur">Manipur</option>
+        <option value="Meghalaya">Meghalaya</option>
+        <option value="Mizoram">Mizoram</option>
+        <option value="Nagaland">Nagaland</option>
+        <option value="Orissa">Orissa</option>
+        <option value="Pondicherry">Pondicherry</option>
+        <option value="Punjab">Punjab</option>
+        <option value="Rajasthan">Rajasthan</option>
+        <option value="Sikkim">Sikkim</option>
+        <option value="Tamil Nadu">Tamil Nadu</option>
+        <option value="Tripura">Tripura</option>
+        <option value="Uttar Pradesh">Uttar Pradesh</option>
+        <option value="UTTARAKHAND">UTTARAKHAND</option>
+        <option value="West Bengal">West Bengal</option>
+        <option value="Telangana">Telangana</option>
+     </select>
+     </td><br><br>
+
+     <tr>
+         <td></td>
+         <td> District:<input type="text" ngModel name="district"><br><br></td>
+     </tr>
+     <tr>
+        <td></td>
+        <td>  Pin Code:<input type="text" ngModel name="pinCode"><br><br></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Mobile No: <b>+91</b><input type="text" ngModel name="mobileNumber"><br><br></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Email:<input type="text" ngModel name="email"><br><br></td>
+    </tr>
+    <tr>
+        <td>
+            <b>Identification Details *:</b><br><br></td>
+        <td>  Aadhar card No:<input type="text" ngModel name="aadharNumber"><br><br>  </td>
+    </tr>
+
+<tr>
+    <td>
+<b>Verification:</b>
+</td>
+<td>
+<p>Type the characters you see in the picture below</p>
+</td>
+</tr>
+<tr>
+    <td></td>
+    <td>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTorVB_CCdNKsgqx_fGp5_2ZAkii67d--kpmpRDKMKT-gSJUhwH&s"><br><br>
+</td>
+</tr>
+<tr>
+    <td></td>
+    <td>
+<input type="text"><br>
+</td>
+</tr>
+<tr>
+ <td>
+<button>Submit</button></td>
+</tr>
+
+      </table>                
+    
+    </form>
+</body>

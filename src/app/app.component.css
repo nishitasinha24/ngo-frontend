@@ -1,0 +1,18 @@
+div{ 
+    background-color: aqua;
+    padding:1%;
+    font-size: large;
+}
+img{
+    height:300px;
+    width:600px;
+
+}
+body{
+    background-color: chartreuse;
+}
+#div2{
+margin:50 ,20,20,50;
+background-color: cornflowerblue;
+
+}
