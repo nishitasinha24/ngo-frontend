@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../services/user.service';
 import { Ngo } from '../model/Ngo';
-import { Observable } from 'rxjs';
+import { UserService } from '../services/user.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -9,14 +9,17 @@ import { Observable } from 'rxjs';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  public ngo: Observable<Ngo[]>;
+  public ngo: Ngo[];
+  
 
-
-  constructor(public service: UserService, ) { }
+  constructor(
+    private service: UserService, 
+  ) { }
 
   ngOnInit() {
-    this.ngo = this.service.getNgo();
-    // .subscribe(data => this.ngo = data);
+    //console.log(localStorage.getItem("Id")); 
+    this.service.getNgo()
+    .subscribe(data => this.ngo = data);
     console.log(this.ngo);
   }
 

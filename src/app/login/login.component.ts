@@ -21,7 +21,6 @@ export class LoginComponent implements OnInit {
 
   authenticate(user)
   {
-    console.log(user);
     this.service.signIn(user).then(response=>{
       console.log(response);
       this.router.navigate(['/profile']);

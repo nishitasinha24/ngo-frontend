@@ -18,6 +18,8 @@ export class ChildComponent implements OnInit {
   {
     this.service.childRegister(user).then(response=>{
       console.log(response);
+      localStorage.getItem('ngoid');
+      console.log(localStorage.getItem('ngoid'));
       this.router.navigate(['/profile']);
     }).catch(error=>{
       console.log(error);

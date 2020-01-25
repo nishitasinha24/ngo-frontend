@@ -1,1 +1,38 @@
 <p>child-list works!</p>
+
+<div class="bs-example">
+
+
+<h1 align="center">Children List</h1>
+<div>
+    <table border="1px" align="center" >
+       <tr style="width: 50;height: 50;">
+           <td style="width: 50;"><b>id</b></td>
+           <td><b>name</b></td>
+           <td><b>age</b></td>
+           <td><b>gender</b></td>
+           <td><b>color</b></td>
+
+           <td><b>Image</b></td>
+           <td><b>health</b></td>
+           <td><b>bloodGroup</b></td>
+          
+
+
+           <td></td>
+       </tr>
+
+        <tr *ngFor="let c of user" class="table-primary">
+            <td>{{c.child-id}}</td>
+            <td>{{c.child_name}}</td>
+            <td>{{c.age}}</td>
+            <td>{{c.gender}}</td>
+            <td>{{c.color}}</td>
+            <td>{{c.url}}</td>
+            <td>{{c.health}}</td>
+            <td>{{c.bloodGroup}}</td>
+
+        </tr>
+    </table>
+</div>
+</div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
-import { Children } from '../model/children';
+
+import { UserService } from '../services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-child-list',
@@ -8,22 +9,30 @@ import { Children } from '../model/children';
   styleUrls: ['./child-list.component.css']
 })
 export class ChildListComponent implements OnInit {
-  child: Children[] = []; 
 
-  constructor(private http: HttpClient) { }
+  user:any;
+
+  debugger;
+  constructor(public router: Router,
+              private service: UserService
+              ) {
+                sessionStorage.getItem('ngoid');
+                console.log(sessionStorage.getItem('ngoid'));
+                 this.service.childList(JSON.parse(sessionStorage.getItem('ngoid'))).then(response => {
+                  console.log(response);
+                  this.user = response;
+                }).catch(error => {
+                    console.log(error);
+                  });
+              }
+      
+            
 
   ngOnInit() {
-    this.getAllChildren();
+  
   }
 
-  public getAllChildren(){
-      this.http.get<Children[]>("http://localhost:8095/childlist").subscribe(
-        res => {
-          this.child = res;
-        },
-        err => {
-          alert("An error has occured;")
-        }
-      );
+
+    
   }
-}
+
