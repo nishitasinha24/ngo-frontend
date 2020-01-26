@@ -20,10 +20,7 @@ export class NgoRegisterComponent implements OnInit {
   //data:any;
   ngoRegister(user)
   {
-    
     this.service.ngoSignUp(user).subscribe((response) =>{
-      
-      
       this.ngo = response;
     }, (error) => {
       console.log(error);

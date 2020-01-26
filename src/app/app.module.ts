@@ -10,10 +10,12 @@ import { UserService } from './services/user.service';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponent
+    routingComponent,
+    
   ],
   imports: [
     BrowserModule,

@@ -15,6 +15,8 @@ import { NgoRegisterComponent } from './ngo-register/ngo-register.component';
 import { ChildComponent } from './child/child.component';
 import { ChildListComponent } from './child-list/child-list.component';
 import { ChildOptionsComponent } from './child-options/child-options.component';
+import { NgoRequestListComponent } from './ngo-request-list/ngo-request-list.component';
+import { NgoRequestDetailsComponent } from './ngo-request-details/ngo-request-details.component';
 
 
 const routes: Routes = [
@@ -32,7 +34,9 @@ const routes: Routes = [
   {path:'ngoregister', component:NgoRegisterComponent},
   {path:'child', component:ChildComponent},
   {path:'childlist', component:ChildListComponent},
-  {path:'childoptions', component:ChildOptionsComponent}
+  {path:'childoptions', component:ChildOptionsComponent},
+  {path:'requestlist', component:NgoRequestListComponent},
+  {path:'ngorequestdetails', component:NgoRequestDetailsComponent}
 
 ];
 
@@ -41,4 +45,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponent = [AboutComponent, ContactComponent, FaqComponent, HelpComponent, HomeComponent, ParentComponent,NgoComponent,LoginComponent,RegisterComponent, NgoLoginComponent, NgoRegisterComponent, ProfileComponent, ChildComponent, ChildListComponent, ChildOptionsComponent]
+export const routingComponent = [AboutComponent, ContactComponent, FaqComponent, HelpComponent, HomeComponent, ParentComponent,NgoComponent,LoginComponent,RegisterComponent, NgoLoginComponent, 
+  NgoRegisterComponent, ProfileComponent, ChildComponent, ChildListComponent, ChildOptionsComponent, NgoRequestListComponent, NgoRequestDetailsComponent];

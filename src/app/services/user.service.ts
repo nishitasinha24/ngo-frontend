@@ -40,6 +40,7 @@ export class UserService {
   {
     return this.ngo;
   }
+  
   childRegister(user)
   {
  
@@ -51,6 +52,12 @@ export class UserService {
  
     return this.http.post('http://localhost:8098/childlist', user).toPromise();
   }
+
+  requestList(user)
+  {
+    return this.http.post('http://localhost:8098/requestlist', user).toPromise();
+  }
+
 
   
 }

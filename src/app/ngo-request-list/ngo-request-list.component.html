@@ -1,0 +1,7 @@
+<h3>Request List</h3>
+
+<table>
+    <tr *ngFor="let c of user" class="table-primary">
+        <td>{{c.req_id}} <a routerLink="/ngorequestdetails">Details</a></td>
+    </tr>
+</table>
