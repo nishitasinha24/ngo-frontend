@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user.service';
 import { Router } from '@angular/router';
+import { Ngo } from '../model/Ngo';
 
 @Component({
   selector: 'app-child',
@@ -9,17 +10,19 @@ import { Router } from '@angular/router';
 })
 export class ChildComponent implements OnInit {
 
+  ngo:Ngo
   constructor(private service:UserService,private router:Router) { }
 
   ngOnInit() {
+    this.ngo = JSON.parse(sessionStorage.getItem('ngoid'));
+
   }
 
   childReg(user)
   {
-    this.service.childRegister(user).then(response=>{
+    this.service.childRegister(user,this.ngo.ngo_id).then(response=>{
       console.log(response);
-      localStorage.getItem('ngoid');
-      console.log(localStorage.getItem('ngoid'));
+      
       this.router.navigate(['/profile']);
     }).catch(error=>{
       console.log(error);

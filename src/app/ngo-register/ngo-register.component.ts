@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user.service';
 import { Ngo } from '../model/Ngo';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,7 +13,7 @@ export class NgoRegisterComponent implements OnInit {
   ngo:any=[];
   
 
-  constructor(private service:UserService) { }
+  constructor(private service:UserService,private router:Router) { }
 
   ngOnInit() {
   }
@@ -21,7 +22,12 @@ export class NgoRegisterComponent implements OnInit {
   ngoRegister(user)
   {
     this.service.ngoSignUp(user).subscribe((response) =>{
+      console.log(response);
+
+
       this.ngo = response;
+      this.router.navigate(['/ngologin']);
+
     }, (error) => {
       console.log(error);
     });

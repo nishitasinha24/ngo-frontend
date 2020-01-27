@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpParams} from '@angular/common/http';
 import { Ngo } from '../model/Ngo';
 import { Observable } from 'rxjs';
 
@@ -15,6 +15,7 @@ export class UserService {
 
   signIn(user)
   {
+    console.log(user);
     return this.http.post('http://localhost:8098/auth',user).toPromise();
   }
 
@@ -41,10 +42,12 @@ export class UserService {
     return this.ngo;
   }
   
-  childRegister(user)
+  childRegister(user,id)
   {
- 
-    return this.http.post('http://localhost:8098/childreg',user).toPromise();
+    console.log(id);
+
+    let params1= new HttpParams().set('id',id);
+    return this.http.post('http://localhost:8098/childreg',user,{params:params1}).toPromise();
   }
   
   childList(user)
