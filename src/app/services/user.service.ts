@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import { Ngo } from '../model/Ngo';
 import { Observable } from 'rxjs';
+import { ChildRequest } from '../model/ChildRequest';
 
 @Injectable({
   providedIn: 'root'
@@ -37,6 +38,18 @@ export class UserService {
     return this.ngo;
   }
 
+  ngoUpdate(user)
+  {
+    return this.http.post('http://localhost:8098/ngoupdate',user).toPromise();
+
+  }
+
+  parentUpdate(user)
+  {
+    return this.http.post('http://localhost:8098/parentupdate',user).toPromise();
+
+  }
+
   getNgo():Observable<Ngo[]>
   {
     return this.ngo;
@@ -56,11 +69,34 @@ export class UserService {
     return this.http.post('http://localhost:8098/childlist', user).toPromise();
   }
 
-  requestList(user)
+  ngoRequestList(user)
   {
-    return this.http.post('http://localhost:8098/requestlist', user).toPromise();
+    return this.http.post('http://localhost:8098/ngorequestlist', user).toPromise();
   }
 
+  getRequestDetails(id)
+  {
+    console.log(id);
+    let params2= new HttpParams().set('id',id);
+    return this.http.post('http://localhost:8098/oneRequestfromlist',{params:params2} ).toPromise();
+  }
+ 
+  /*public req: Observable<Ngo[]>;
+  ngoRequestList(user):Observable<Ngo[]>
+  {
+    this.req = this.http.post<Ngo[]>('http://localhost:8098/ngorequestlist', user);
+    return this.req;
+  }
+
+  getChildRequest():Observable<Ngo[]>
+  {
+    return this.req;
+  }*/
+
+  ngoResponse(user)
+  {
+    return this.http.post('http://localhost:8098/responsefromngo', user).toPromise();
+  }
 
   
 }

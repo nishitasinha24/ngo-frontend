@@ -7,7 +7,7 @@
 <div>
     <table style="width:50%"align="center" 
      >
-            <h3>Parents Details</h3>
+            <!--<h3>Parents Details</h3>
             <tr>state</tr>
             <tr>district</tr>
             <tr>contactPerson</tr>
@@ -56,11 +56,14 @@
             <tr>ageOfChild</tr>
             <tr>ngo</tr>
             <tr>ngoName</tr>
+            -->
             
-            
 
 
 
+            <tr>
+              <td>{{parentitem.reg_No}}</td>
+            <tr>
 
 
 
@@ -71,5 +74,12 @@
 
        
     </table>
+    <div>
+      <a routerLink = "/requestlist">Back</a> 
+    </div>
+    <div>
+      <button (click)="onClickAccept()">Accept</button>
+    </div>
 
-</div>
+
+

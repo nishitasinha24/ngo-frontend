@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { UserService } from '../services/user.service';
 import { Route } from '@angular/compiler/src/core';
 import { Router } from '@angular/router';
+import { Parent } from '../model/Parent';
 
 
 
@@ -23,7 +24,10 @@ export class LoginComponent implements OnInit {
   {
     this.service.signIn(user).then(response=>{
       console.log(response);
-      this.router.navigate(['/profile']);
+      let p = new Parent(response);
+      sessionStorage.setItem('parent', JSON.stringify(p));
+      console.log(sessionStorage.getItem('parent'));
+      this.router.navigate(['/parentoptions']);
     }).catch(error=>{
       console.log(error);
     });

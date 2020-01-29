@@ -23,7 +23,7 @@ export class ChildComponent implements OnInit {
     this.service.childRegister(user,this.ngo.ngo_id).then(response=>{
       console.log(response);
       
-      this.router.navigate(['/profile']);
+      this.router.navigate(['/childlist']);
     }).catch(error=>{
       console.log(error);
     });

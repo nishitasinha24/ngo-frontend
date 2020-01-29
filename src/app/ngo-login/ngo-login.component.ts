@@ -3,6 +3,7 @@ import { UserService } from '../services/user.service';
 import { Router } from '@angular/router';
 import { Ngo } from '../model/Ngo';
 
+
 @Component({
   selector: 'app-ngo-login',
   templateUrl: './ngo-login.component.html',
@@ -19,7 +20,7 @@ export class NgoLoginComponent implements OnInit {
   ngoAuthenticate(user)
   {
     this.service.ngoSignIn(user).then(response=>{
-      console.log(response);
+      //console.log(response);
       let n = new Ngo(response);
       sessionStorage.setItem('ngoid', JSON.stringify(n));
       console.log(sessionStorage.getItem('ngoid'));

@@ -1,7 +1,9 @@
 <h3>Request List</h3>
 
 <table>
-    <tr *ngFor="let c of user" class="table-primary">
-        <td>{{c.req_id}} <a routerLink="/ngorequestdetails">Details</a></td>
+    <tr *ngFor="let c of user"  class="table-primary">
+        <!--<ngContainer *ngIf = "c.ngo_id === ngo_id" >-->
+            <td>{{c.req_id}} <a [routerLink]="['/ngorequestdetails', c.req_id]">Details</a></td>
+        <!--</ngContainer>-->
     </tr>
 </table>
