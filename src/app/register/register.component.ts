@@ -19,7 +19,7 @@ export class RegisterComponent implements OnInit {
     this.service.signUp(user).then(response=>{
       let parent = new Parent(response);
       console.log(parent);
-      this.router.navigate(['/profile']);
+      this.router.navigate(['/login']);
     }).catch(error=>{
       console.log(error);
     });
