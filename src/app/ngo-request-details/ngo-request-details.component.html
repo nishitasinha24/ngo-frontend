@@ -62,17 +62,46 @@
 
 
             <tr>
-              <td>{{parentitem.reg_No}}</td>
+              
+              <!--<td>{{parentitem.gender}}</td>-->
+              <td>{{parentitem.maleParName}}</td>
+              <td>{{parentitem.femaleParName}}</td>
+              <td>{{parentitem.maleParAge}}</td>
+              <td>{{parentitem.femaleParAge}}</td>
+              <td>{{parentitem.compositeAge}}</td>
+              <td>{{parentitem.mOccupation}}</td>
+              <td>{{parentitem.fOccupation}}</td>
+              <td>{{parentitem.mIncome}}</td>
+              <td>{{parentitem.fIncome}}</td>
+              <td>{{parentitem.numOfChildren}}</td>
+              <td>{{parentitem.address}}</td>
+              <td>{{parentitem.city}}</td>
+              <td>{{parentitem.district}}</td>
+              <td>{{parentitem.city}}</td>
+              <td>{{parentitem.state}}</td>
+              <td>{{parentitem.pinCode}}</td>
+              <td>{{parentitem.adharNumber}}</td>
+              <td>{{parentitem.mobileNumber}}</td>
+              <td>{{parentitem.maritalStatus}}</td>
+              <td>{{parentitem.reg_date}}</td>
+              <td>{{parentitem.numOfchildrenParentHave}}</td>
+              <td>{{parentitem.email}}</td>
             <tr>
+   
+    </table>
 
-
-
-
-
-         
-      
-
-       
+    <h3 style="text-align: center;">CHILD DETAILS</h3>
+    <table>
+      <tr>
+        <td>{{childitem.child_id}}</td>
+        <td>{{childitem.child_name}}</td>
+        <td>{{childitem.age}}</td>
+        <td>{{childitem.gender}}</td>
+        <td>{{childitem.color}}</td>
+        <td>{{childitem.health}}</td>
+        <td>{{childitem.bloodGroup}}</td>
+        <td>{{childitem.email}}</td>
+      </tr>
     </table>
     <div>
       <a routerLink = "/requestlist">Back</a> 

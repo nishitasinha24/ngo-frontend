@@ -2,7 +2,7 @@ export class Ngo {
     ngo_id:number;
     ngo_name:string;
     email:string;
-    setUpDate:string;
+    setUpDate:Date;
     address:string;
     state:string;
     district:string;

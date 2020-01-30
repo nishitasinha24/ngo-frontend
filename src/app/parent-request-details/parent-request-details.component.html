@@ -1,0 +1,112 @@
+
+
+<div class="bs-example">
+
+
+    <h1 align="center">Parents Details and Requirements</h1>
+    <div>
+        <table style="width:50%"align="center" 
+         >
+                <!--<h3>Parents Details</h3>
+                <tr>state</tr>
+                <tr>district</tr>
+                <tr>contactPerson</tr>
+                <tr>email</tr>
+                
+            
+                <tr>phoneNumber</tr>
+                <tr>gender</tr>
+                <tr>maleParName</tr>
+                <tr>femaleParName</tr>
+                <tr>maleParAge</tr>
+                <tr>femaleParAge</tr>
+                <tr>compositeAge</tr>
+                <tr>mOccupation</tr>
+                <tr>fOccupation</tr>
+                <tr>mIncome</tr>
+                <tr>fIncome</tr>
+                <tr>numOfChildren</tr>
+                <tr>address</tr>
+                <tr>city</tr>
+                
+                <tr>state</tr>
+                <tr>pinCode</tr>
+                <tr>adharNumber</tr>
+                <tr>mobileNumber</tr>
+                <tr>maritalStatus</tr>
+               
+                <tr>numOfchildrenParentHave</tr>
+            
+                <tr>moto</tr>
+                <tr>requested_date</tr>
+              
+              
+             
+              
+              <tr>firstStateOfAdoption</tr>
+            <tr>secondStateOfAdoption</tr>
+            <tr>thirdStateOfAdoption</tr>
+               
+                <tr>setUpDate</tr>
+                <tr>address</tr>
+                <h3>Parents Requirements</h3>
+                <tr>genderOfChild</tr>
+                <tr>healthStatusOfChild</tr>
+                <tr>categoryOfChild</tr>
+                <tr>ageOfChild</tr>
+                <tr>ngo</tr>
+                <tr>ngoName</tr>
+                -->
+                
+    
+    
+    
+                <tr>
+                  
+                  <!--<td>{{parentitem.gender}}</td>-->
+                  <td>{{ngoitem.ngo_id}}</td>
+                  <td>{{ngoitem.ngo_name}}</td>
+                  <td>{{ngoitem.email}}</td>
+                  <td>{{ngoitem.setUpDate}}</td>
+                  <td>{{ngoitem.address}}</td>
+                  <td>{{ngoitem.state}}</td>
+                  <td>{{ngoitem.district}}</td>
+                  <td>{{ngoitem.contactPerson}}</td>
+                  <td>{{ngoitem.phonenumber}}</td>
+
+
+                <tr>
+    
+    
+    
+    
+    
+             
+          
+    
+           
+        </table>
+    
+        <h3 style="text-align: center;">CHILD DETAILS</h3>
+        <table>
+          <tr>
+            <td>{{childitem.child_id}}</td>
+            <td>{{childitem.child_name}}</td>
+            <td>{{childitem.age}}</td>
+            <td>{{childitem.gender}}</td>
+            <td>{{childitem.color}}</td>
+            <td>{{childitem.health}}</td>
+            <td>{{childitem.bloodGroup}}</td>
+            <td>{{childitem.email}}</td>
+          </tr>
+        </table>
+        <div>
+          <a routerLink = "/requestlist">Back</a> 
+        </div>
+        <div>
+          <button (click)="onClickAccept()">Accept</button>
+        </div>
+    
+    
+    
+    

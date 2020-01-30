@@ -8,6 +8,14 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { UserService } from './services/user.service';
 import {MatDatepickerModule,MatNativeDateModule, MatInputModule} from '@angular/material';
 import { NgoResponseComponent } from './ngo-response/ngo-response.component';
+import { ParentDeleteComponent } from './parent-delete/parent-delete.component';
+import { NgoDeleteComponent } from './ngo-delete/ngo-delete.component';
+import { ParentRequestListComponent } from './parent-request-list/parent-request-list.component';
+import { ParentRequestDetailsComponent } from './parent-request-details/parent-request-details.component';
+import { ParentLogoutComponent } from './parent-logout/parent-logout.component';
+import { NgoLogoutComponent } from './ngo-logout/ngo-logout.component';
+import { FinalAdoptionStatusComponent } from './final-adoption-status/final-adoption-status.component';
+
 
 
 
@@ -15,7 +23,13 @@ import { NgoResponseComponent } from './ngo-response/ngo-response.component';
   declarations: [
     AppComponent,
     routingComponent,
-    NgoResponseComponent
+    ParentRequestListComponent,
+    ParentRequestDetailsComponent,
+    ParentLogoutComponent,
+    NgoLogoutComponent,
+    FinalAdoptionStatusComponent,
+    
+    
     
   ],
   imports: [

@@ -8,7 +8,9 @@ import { Children} from '../model/Children'
 })
 export class ChildOptionsComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    console.log("ngo options!!!!!!!!!!");
+   }
 
   ngOnInit() {
   }

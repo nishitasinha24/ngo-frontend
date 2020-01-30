@@ -23,6 +23,14 @@ import { ParentNotificationsComponent } from './parent-notifications/parent-noti
 import { ChildPreferenceComponent } from './child-preference/child-preference.component';
 import { NgoProfileComponent } from './ngo-profile/ngo-profile.component';
 import { NgoUpdateComponent } from './ngo-update/ngo-update.component';
+import { NgoDeleteComponent } from './ngo-delete/ngo-delete.component';
+import { ParentUpdateComponent } from './parent-update/parent-update.component';
+import { ParentDeleteComponent } from './parent-delete/parent-delete.component';
+import { ParentRequestListComponent } from './parent-request-list/parent-request-list.component';
+import { ParentRequestDetailsComponent } from './parent-request-details/parent-request-details.component';
+import { ParentLogoutComponent } from './parent-logout/parent-logout.component';
+import { NgoLogoutComponent } from './ngo-logout/ngo-logout.component';
+
 
 
 const routes: Routes = [
@@ -48,8 +56,14 @@ const routes: Routes = [
   {path:'parentnotifications', component:ParentNotificationsComponent},
   {path:'childpreferences', component:ChildPreferenceComponent},
   {path:'ngoprofile', component:NgoProfileComponent},
-  {path:'ngoupdate', component:NgoUpdateComponent}
-
+  {path:'ngoupdate', component:NgoUpdateComponent},
+  {path:'ngodelete', component:NgoDeleteComponent},
+  {path:'parentupdate', component:ParentUpdateComponent},
+  {path:'parentdelete', component:ParentDeleteComponent},
+  {path:'parentrequestlist', component:ParentRequestListComponent},
+  {path:'parentrequestdetails/:req_id', component:ParentRequestDetailsComponent},
+  {path:'parentlogout', component:ParentLogoutComponent},
+  {path:'ngologout', component:NgoLogoutComponent}
 ];
 
 @NgModule({
@@ -59,4 +73,6 @@ const routes: Routes = [
 export class AppRoutingModule { }
 export const routingComponent = [AboutComponent, ContactComponent, FaqComponent, HelpComponent, HomeComponent, ParentComponent,NgoComponent,LoginComponent,RegisterComponent, NgoLoginComponent, 
   NgoRegisterComponent, ProfileComponent, ChildComponent, ChildListComponent, ChildOptionsComponent, NgoRequestListComponent, NgoRequestDetailsComponent, ParentOptionsComponent,
-  ParentProfileComponent, ParentNotificationsComponent, ChildPreferenceComponent, NgoProfileComponent, NgoUpdateComponent];
+  ParentProfileComponent, ParentNotificationsComponent, ChildPreferenceComponent, NgoProfileComponent, NgoUpdateComponent, ParentUpdateComponent, NgoDeleteComponent,ParentDeleteComponent,
+  ParentRequestDetailsComponent, ParentLogoutComponent, NgoLogoutComponent
+];

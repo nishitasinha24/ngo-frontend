@@ -74,11 +74,16 @@ export class UserService {
     return this.http.post('http://localhost:8098/ngorequestlist', user).toPromise();
   }
 
+  parentRequestList(user)
+  {
+    return this.http.post('http://localhost:8098/parentrequestList', user).toPromise();
+  }
+
+
   getRequestDetails(id)
   {
     console.log(id);
-    let params2= new HttpParams().set('id',id);
-    return this.http.post('http://localhost:8098/oneRequestfromlist',{params:params2} ).toPromise();
+    return this.http.get('http://localhost:8098/oneRequestfromlist/'+id).toPromise(); 
   }
  
   /*public req: Observable<Ngo[]>;
@@ -95,7 +100,19 @@ export class UserService {
 
   ngoResponse(user)
   {
-    return this.http.post('http://localhost:8098/responsefromngo', user).toPromise();
+    return this.http.post('http://localhost:8098/responsefromngo', user);
+  }
+
+  ngoDelete(id)
+  {
+    console.log(id);
+    return this.http.delete('http://localhost:8098/delete/'+id);
+  }
+
+  parentDelete(id)
+  {
+    console.log(id);
+    return this.http.delete('http://localhost:8098/parentdelete/'+id);
   }
 
   
